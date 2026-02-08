@@ -3,7 +3,8 @@
 - create ESP and root partition using `cfdisk`
 - format ESP with `mkfs.fat -F32 *esp*` and format root partition with `mkfs.ext4 *root_partition*`
 - mount root partition with `mount *root_partition* /mnt` and ESP with `mount --mkdir *esp* /mnt/boot`
-- install packages ```bash 
+- install packages 
+```bash 
 pacstrap -K /mnt base base-devel linux linux-firmware networkmanager grub efibootmgr ly niri mako fuzzel udiskie xdg-desktop-portal-gtk xdg-desktop-portal-gnome swaybg swaylock pipewire pipewire-session-manager pipewire-pulse wireplumber git helix sudo nano kitty egl-wayland nvidia-dkms nvidia-utils
 ```
 - generate fstab `genfstab -U /mnt >> /mnt/etc/fstab`
